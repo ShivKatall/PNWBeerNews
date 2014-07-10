@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DE4BB59196F063C009140A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB58196F063C009140A3 /* Foundation.framework */; };
+		3DE4BB5B196F063C009140A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB5A196F063C009140A3 /* CoreGraphics.framework */; };
+		3DE4BB5D196F063C009140A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB5C196F063C009140A3 /* UIKit.framework */; };
+		3DE4BB63196F063C009140A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4BB61196F063C009140A3 /* InfoPlist.strings */; };
+		3DE4BB65196F063C009140A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB64196F063C009140A3 /* main.m */; };
+		3DE4BB69196F063C009140A3 /* CBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB68196F063C009140A3 /* CBAppDelegate.m */; };
+		3DE4BB6C196F063C009140A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4BB6A196F063C009140A3 /* Main.storyboard */; };
+		3DE4BB6F196F063C009140A3 /* CBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB6E196F063C009140A3 /* CBViewController.m */; };
+		3DE4BB71196F063C009140A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4BB70196F063C009140A3 /* Images.xcassets */; };
+		3DE4BB78196F063C009140A3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB77196F063C009140A3 /* XCTest.framework */; };
+		3DE4BB79196F063C009140A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB58196F063C009140A3 /* Foundation.framework */; };
+		3DE4BB7A196F063C009140A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB5C196F063C009140A3 /* UIKit.framework */; };
+		3DE4BB82196F063C009140A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4BB80196F063C009140A3 /* InfoPlist.strings */; };
+		3DE4BB84196F063C009140A3 /* PNW_Beer_NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB83196F063C009140A3 /* PNW_Beer_NewsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DE4BB7B196F063C009140A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DE4BB4D196F063C009140A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DE4BB54196F063C009140A3;
+			remoteInfo = "PNW Beer News";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3DE4BB55196F063C009140A3 /* PNW Beer News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PNW Beer News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE4BB58196F063C009140A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3DE4BB5A196F063C009140A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3DE4BB5C196F063C009140A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3DE4BB60196F063C009140A3 /* PNW Beer News-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PNW Beer News-Info.plist"; sourceTree = "<group>"; };
+		3DE4BB62196F063C009140A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DE4BB64196F063C009140A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DE4BB66196F063C009140A3 /* PNW Beer News-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PNW Beer News-Prefix.pch"; sourceTree = "<group>"; };
+		3DE4BB67196F063C009140A3 /* CBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBAppDelegate.h; sourceTree = "<group>"; };
+		3DE4BB68196F063C009140A3 /* CBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBAppDelegate.m; sourceTree = "<group>"; };
+		3DE4BB6B196F063C009140A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3DE4BB6D196F063C009140A3 /* CBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBViewController.h; sourceTree = "<group>"; };
+		3DE4BB6E196F063C009140A3 /* CBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBViewController.m; sourceTree = "<group>"; };
+		3DE4BB70196F063C009140A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3DE4BB76196F063C009140A3 /* PNW Beer NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNW Beer NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE4BB77196F063C009140A3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3DE4BB7F196F063C009140A3 /* PNW Beer NewsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PNW Beer NewsTests-Info.plist"; sourceTree = "<group>"; };
+		3DE4BB81196F063C009140A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DE4BB83196F063C009140A3 /* PNW_Beer_NewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNW_Beer_NewsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DE4BB52196F063C009140A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE4BB5B196F063C009140A3 /* CoreGraphics.framework in Frameworks */,
+				3DE4BB5D196F063C009140A3 /* UIKit.framework in Frameworks */,
+				3DE4BB59196F063C009140A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE4BB73196F063C009140A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE4BB78196F063C009140A3 /* XCTest.framework in Frameworks */,
+				3DE4BB7A196F063C009140A3 /* UIKit.framework in Frameworks */,
+				3DE4BB79196F063C009140A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DE4BB4C196F063C009140A3 = {
+			isa = PBXGroup;
+			children = (
+				3DE4BB5E196F063C009140A3 /* PNW Beer News */,
+				3DE4BB7D196F063C009140A3 /* PNW Beer NewsTests */,
+				3DE4BB57196F063C009140A3 /* Frameworks */,
+				3DE4BB56196F063C009140A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DE4BB56196F063C009140A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DE4BB55196F063C009140A3 /* PNW Beer News.app */,
+				3DE4BB76196F063C009140A3 /* PNW Beer NewsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DE4BB57196F063C009140A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DE4BB58196F063C009140A3 /* Foundation.framework */,
+				3DE4BB5A196F063C009140A3 /* CoreGraphics.framework */,
+				3DE4BB5C196F063C009140A3 /* UIKit.framework */,
+				3DE4BB77196F063C009140A3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DE4BB5E196F063C009140A3 /* PNW Beer News */ = {
+			isa = PBXGroup;
+			children = (
+				3DE4BB67196F063C009140A3 /* CBAppDelegate.h */,
+				3DE4BB68196F063C009140A3 /* CBAppDelegate.m */,
+				3DE4BB6A196F063C009140A3 /* Main.storyboard */,
+				3DE4BB6D196F063C009140A3 /* CBViewController.h */,
+				3DE4BB6E196F063C009140A3 /* CBViewController.m */,
+				3DE4BB70196F063C009140A3 /* Images.xcassets */,
+				3DE4BB5F196F063C009140A3 /* Supporting Files */,
+			);
+			path = "PNW Beer News";
+			sourceTree = "<group>";
+		};
+		3DE4BB5F196F063C009140A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DE4BB60196F063C009140A3 /* PNW Beer News-Info.plist */,
+				3DE4BB61196F063C009140A3 /* InfoPlist.strings */,
+				3DE4BB64196F063C009140A3 /* main.m */,
+				3DE4BB66196F063C009140A3 /* PNW Beer News-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DE4BB7D196F063C009140A3 /* PNW Beer NewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DE4BB83196F063C009140A3 /* PNW_Beer_NewsTests.m */,
+				3DE4BB7E196F063C009140A3 /* Supporting Files */,
+			);
+			path = "PNW Beer NewsTests";
+			sourceTree = "<group>";
+		};
+		3DE4BB7E196F063C009140A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DE4BB7F196F063C009140A3 /* PNW Beer NewsTests-Info.plist */,
+				3DE4BB80196F063C009140A3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DE4BB54196F063C009140A3 /* PNW Beer News */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE4BB87196F063C009140A3 /* Build configuration list for PBXNativeTarget "PNW Beer News" */;
+			buildPhases = (
+				3DE4BB51196F063C009140A3 /* Sources */,
+				3DE4BB52196F063C009140A3 /* Frameworks */,
+				3DE4BB53196F063C009140A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PNW Beer News";
+			productName = "PNW Beer News";
+			productReference = 3DE4BB55196F063C009140A3 /* PNW Beer News.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DE4BB75196F063C009140A3 /* PNW Beer NewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE4BB8A196F063C009140A3 /* Build configuration list for PBXNativeTarget "PNW Beer NewsTests" */;
+			buildPhases = (
+				3DE4BB72196F063C009140A3 /* Sources */,
+				3DE4BB73196F063C009140A3 /* Frameworks */,
+				3DE4BB74196F063C009140A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DE4BB7C196F063C009140A3 /* PBXTargetDependency */,
+			);
+			name = "PNW Beer NewsTests";
+			productName = "PNW Beer NewsTests";
+			productReference = 3DE4BB76196F063C009140A3 /* PNW Beer NewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DE4BB4D196F063C009140A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Cole Bratcher";
+				TargetAttributes = {
+					3DE4BB75196F063C009140A3 = {
+						TestTargetID = 3DE4BB54196F063C009140A3;
+					};
+				};
+			};
+			buildConfigurationList = 3DE4BB50196F063C009140A3 /* Build configuration list for PBXProject "PNW Beer News" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DE4BB4C196F063C009140A3;
+			productRefGroup = 3DE4BB56196F063C009140A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DE4BB54196F063C009140A3 /* PNW Beer News */,
+				3DE4BB75196F063C009140A3 /* PNW Beer NewsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DE4BB53196F063C009140A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE4BB71196F063C009140A3 /* Images.xcassets in Resources */,
+				3DE4BB63196F063C009140A3 /* InfoPlist.strings in Resources */,
+				3DE4BB6C196F063C009140A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE4BB74196F063C009140A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE4BB82196F063C009140A3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DE4BB51196F063C009140A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE4BB65196F063C009140A3 /* main.m in Sources */,
+				3DE4BB69196F063C009140A3 /* CBAppDelegate.m in Sources */,
+				3DE4BB6F196F063C009140A3 /* CBViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE4BB72196F063C009140A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE4BB84196F063C009140A3 /* PNW_Beer_NewsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DE4BB7C196F063C009140A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DE4BB54196F063C009140A3 /* PNW Beer News */;
+			targetProxy = 3DE4BB7B196F063C009140A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3DE4BB61196F063C009140A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE4BB62196F063C009140A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3DE4BB6A196F063C009140A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE4BB6B196F063C009140A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3DE4BB80196F063C009140A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE4BB81196F063C009140A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DE4BB85196F063C009140A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3DE4BB86196F063C009140A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DE4BB88196F063C009140A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PNW Beer News/PNW Beer News-Prefix.pch";
+				INFOPLIST_FILE = "PNW Beer News/PNW Beer News-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3DE4BB89196F063C009140A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PNW Beer News/PNW Beer News-Prefix.pch";
+				INFOPLIST_FILE = "PNW Beer News/PNW Beer News-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3DE4BB8B196F063C009140A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PNW Beer News.app/PNW Beer News";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PNW Beer News/PNW Beer News-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PNW Beer NewsTests/PNW Beer NewsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3DE4BB8C196F063C009140A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PNW Beer News.app/PNW Beer News";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PNW Beer News/PNW Beer News-Prefix.pch";
+				INFOPLIST_FILE = "PNW Beer NewsTests/PNW Beer NewsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DE4BB50196F063C009140A3 /* Build configuration list for PBXProject "PNW Beer News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE4BB85196F063C009140A3 /* Debug */,
+				3DE4BB86196F063C009140A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE4BB87196F063C009140A3 /* Build configuration list for PBXNativeTarget "PNW Beer News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE4BB88196F063C009140A3 /* Debug */,
+				3DE4BB89196F063C009140A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3DE4BB8A196F063C009140A3 /* Build configuration list for PBXNativeTarget "PNW Beer NewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE4BB8B196F063C009140A3 /* Debug */,
+				3DE4BB8C196F063C009140A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DE4BB4D196F063C009140A3 /* Project object */;
+}
