@@ -14,13 +14,15 @@
 		3DE4BB65196F063C009140A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB64196F063C009140A3 /* main.m */; };
 		3DE4BB69196F063C009140A3 /* CBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB68196F063C009140A3 /* CBAppDelegate.m */; };
 		3DE4BB6C196F063C009140A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4BB6A196F063C009140A3 /* Main.storyboard */; };
-		3DE4BB6F196F063C009140A3 /* CBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB6E196F063C009140A3 /* CBViewController.m */; };
+		3DE4BB6F196F063C009140A3 /* CBCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB6E196F063C009140A3 /* CBCollectionViewController.m */; };
 		3DE4BB71196F063C009140A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4BB70196F063C009140A3 /* Images.xcassets */; };
 		3DE4BB78196F063C009140A3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB77196F063C009140A3 /* XCTest.framework */; };
 		3DE4BB79196F063C009140A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB58196F063C009140A3 /* Foundation.framework */; };
 		3DE4BB7A196F063C009140A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB5C196F063C009140A3 /* UIKit.framework */; };
 		3DE4BB82196F063C009140A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4BB80196F063C009140A3 /* InfoPlist.strings */; };
 		3DE4BB84196F063C009140A3 /* PNW_Beer_NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB83196F063C009140A3 /* PNW_Beer_NewsTests.m */; };
+		3DE4BB8F196F10B4009140A3 /* CBNewsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB8E196F10B4009140A3 /* CBNewsSource.m */; };
+		3DE4BB92196F1204009140A3 /* CBDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB91196F1204009140A3 /* CBDataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,19 @@
 		3DE4BB67196F063C009140A3 /* CBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBAppDelegate.h; sourceTree = "<group>"; };
 		3DE4BB68196F063C009140A3 /* CBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBAppDelegate.m; sourceTree = "<group>"; };
 		3DE4BB6B196F063C009140A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3DE4BB6D196F063C009140A3 /* CBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBViewController.h; sourceTree = "<group>"; };
-		3DE4BB6E196F063C009140A3 /* CBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBViewController.m; sourceTree = "<group>"; };
+		3DE4BB6D196F063C009140A3 /* CBCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBCollectionViewController.h; sourceTree = "<group>"; };
+		3DE4BB6E196F063C009140A3 /* CBCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBCollectionViewController.m; sourceTree = "<group>"; };
 		3DE4BB70196F063C009140A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3DE4BB76196F063C009140A3 /* PNW Beer NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNW Beer NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE4BB77196F063C009140A3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3DE4BB7F196F063C009140A3 /* PNW Beer NewsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PNW Beer NewsTests-Info.plist"; sourceTree = "<group>"; };
 		3DE4BB81196F063C009140A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3DE4BB83196F063C009140A3 /* PNW_Beer_NewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNW_Beer_NewsTests.m; sourceTree = "<group>"; };
+		3DE4BB8D196F10B4009140A3 /* CBNewsSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBNewsSource.h; sourceTree = "<group>"; };
+		3DE4BB8E196F10B4009140A3 /* CBNewsSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBNewsSource.m; sourceTree = "<group>"; };
+		3DE4BB90196F1204009140A3 /* CBDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDataController.h; sourceTree = "<group>"; };
+		3DE4BB91196F1204009140A3 /* CBDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDataController.m; sourceTree = "<group>"; };
+		3DE5DABB19745F7F0085561E /* CBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +119,9 @@
 		3DE4BB5E196F063C009140A3 /* PNW Beer News */ = {
 			isa = PBXGroup;
 			children = (
-				3DE4BB67196F063C009140A3 /* CBAppDelegate.h */,
-				3DE4BB68196F063C009140A3 /* CBAppDelegate.m */,
-				3DE4BB6A196F063C009140A3 /* Main.storyboard */,
-				3DE4BB6D196F063C009140A3 /* CBViewController.h */,
-				3DE4BB6E196F063C009140A3 /* CBViewController.m */,
+				3DE4BB93196F1217009140A3 /* Model */,
+				3DE4BB94196F1231009140A3 /* Controller */,
+				3DE4BB95196F124B009140A3 /* View */,
 				3DE4BB70196F063C009140A3 /* Images.xcassets */,
 				3DE4BB5F196F063C009140A3 /* Supporting Files */,
 			);
@@ -150,6 +155,37 @@
 				3DE4BB80196F063C009140A3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DE4BB93196F1217009140A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DE4BB8D196F10B4009140A3 /* CBNewsSource.h */,
+				3DE4BB8E196F10B4009140A3 /* CBNewsSource.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3DE4BB94196F1231009140A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DE5DABB19745F7F0085561E /* CBConstants.h */,
+				3DE4BB67196F063C009140A3 /* CBAppDelegate.h */,
+				3DE4BB68196F063C009140A3 /* CBAppDelegate.m */,
+				3DE4BB90196F1204009140A3 /* CBDataController.h */,
+				3DE4BB91196F1204009140A3 /* CBDataController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3DE4BB95196F124B009140A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DE4BB6A196F063C009140A3 /* Main.storyboard */,
+				3DE4BB6D196F063C009140A3 /* CBCollectionViewController.h */,
+				3DE4BB6E196F063C009140A3 /* CBCollectionViewController.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +236,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Cole Bratcher";
 				TargetAttributes = {
+					3DE4BB54196F063C009140A3 = {
+						DevelopmentTeam = BBAXTC9262;
+					};
 					3DE4BB75196F063C009140A3 = {
 						TestTargetID = 3DE4BB54196F063C009140A3;
 					};
@@ -250,9 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE4BB92196F1204009140A3 /* CBDataController.m in Sources */,
+				3DE4BB8F196F10B4009140A3 /* CBNewsSource.m in Sources */,
 				3DE4BB65196F063C009140A3 /* main.m in Sources */,
 				3DE4BB69196F063C009140A3 /* CBAppDelegate.m in Sources */,
-				3DE4BB6F196F063C009140A3 /* CBViewController.m in Sources */,
+				3DE4BB6F196F063C009140A3 /* CBCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PNW Beer News/PNW Beer News-Prefix.pch";
 				INFOPLIST_FILE = "PNW Beer News/PNW Beer News-Info.plist";
@@ -390,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PNW Beer News/PNW Beer News-Prefix.pch";
 				INFOPLIST_FILE = "PNW Beer News/PNW Beer News-Info.plist";
@@ -457,6 +500,7 @@
 				3DE4BB89196F063C009140A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DE4BB8A196F063C009140A3 /* Build configuration list for PBXNativeTarget "PNW Beer NewsTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +509,7 @@
 				3DE4BB8C196F063C009140A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

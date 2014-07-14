@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CBViewController : UIViewController
-
+@interface CBCollectionViewController : UIViewController
 @end
