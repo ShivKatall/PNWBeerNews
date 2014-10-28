@@ -21,13 +21,20 @@
     return shared;
 }
 
-- (void)createNewsSources {
+- (id)init
+{
+    self = [super init];
+    _allPosts = [NSMutableArray new];
+    
+    return self;
+}
+
+- (void)createNewsSources
+{
     
     NSURL *seattleBeerNewsURL       = [NSURL URLWithString:@"http://seattlebeernews.com/feed/"];
     NSURL *washingtonBeerBlogURL    = [NSURL URLWithString:@"http://www.washingtonbeerblog.com/feed/"];
     NSURL *oregonCraftBeerURL       = [NSURL URLWithString:@"http://oregoncraftbeer.org/news/feed/"];
-    NSURL *brewPublicURL            = [NSURL URLWithString:@"http://brewpublic.com/feed/"];
-    NSURL *onTapURL                 = [NSURL URLWithString:@"http://magicvalley.com/search/?f=rss&c=blogs/ontap&l=50&s=start_time&sd=desc"];
     
     CBNewsSource *seattleBeerNews       = [[CBNewsSource alloc] initWithName:@"Seattle Beer News"
                                                                          URL:seattleBeerNewsURL
@@ -41,15 +48,8 @@
                                                                          URL:oregonCraftBeerURL
                                                                       active:YES];
     
-    CBNewsSource *brewPublic            = [[CBNewsSource alloc] initWithName:@"Brew Public"
-                                                                         URL:brewPublicURL
-                                                                      active:YES];
     
-    CBNewsSource *onTap                 = [[CBNewsSource alloc] initWithName:@"On Tap: Idaho Beer Blog"
-                                                                         URL:onTapURL
-                                                                      active:YES];
-    
-    _newsSources = [[NSArray alloc] initWithObjects:seattleBeerNews, washingtonBeerBlog, oregonCraftBeer, brewPublic, onTap, nil];
+    _newsSources = [[NSArray alloc] initWithObjects:seattleBeerNews, washingtonBeerBlog, oregonCraftBeer, nil];
 }
 
 

@@ -14,7 +14,7 @@
 		3DE4BB65196F063C009140A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB64196F063C009140A3 /* main.m */; };
 		3DE4BB69196F063C009140A3 /* CBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB68196F063C009140A3 /* CBAppDelegate.m */; };
 		3DE4BB6C196F063C009140A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4BB6A196F063C009140A3 /* Main.storyboard */; };
-		3DE4BB6F196F063C009140A3 /* CBCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB6E196F063C009140A3 /* CBCollectionViewController.m */; };
+		3DE4BB6F196F063C009140A3 /* CBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB6E196F063C009140A3 /* CBMainViewController.m */; };
 		3DE4BB71196F063C009140A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE4BB70196F063C009140A3 /* Images.xcassets */; };
 		3DE4BB78196F063C009140A3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB77196F063C009140A3 /* XCTest.framework */; };
 		3DE4BB79196F063C009140A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB58196F063C009140A3 /* Foundation.framework */; };
@@ -23,6 +23,7 @@
 		3DE4BB84196F063C009140A3 /* PNW_Beer_NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB83196F063C009140A3 /* PNW_Beer_NewsTests.m */; };
 		3DE4BB8F196F10B4009140A3 /* CBNewsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB8E196F10B4009140A3 /* CBNewsSource.m */; };
 		3DE4BB92196F1204009140A3 /* CBDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB91196F1204009140A3 /* CBDataController.m */; };
+		3DFFAA7119FEF60C006A970B /* CBPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFAA7019FEF60C006A970B /* CBPost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +48,8 @@
 		3DE4BB67196F063C009140A3 /* CBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBAppDelegate.h; sourceTree = "<group>"; };
 		3DE4BB68196F063C009140A3 /* CBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBAppDelegate.m; sourceTree = "<group>"; };
 		3DE4BB6B196F063C009140A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3DE4BB6D196F063C009140A3 /* CBCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBCollectionViewController.h; sourceTree = "<group>"; };
-		3DE4BB6E196F063C009140A3 /* CBCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBCollectionViewController.m; sourceTree = "<group>"; };
+		3DE4BB6D196F063C009140A3 /* CBMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBMainViewController.h; sourceTree = "<group>"; };
+		3DE4BB6E196F063C009140A3 /* CBMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBMainViewController.m; sourceTree = "<group>"; };
 		3DE4BB70196F063C009140A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3DE4BB76196F063C009140A3 /* PNW Beer NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNW Beer NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE4BB77196F063C009140A3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -60,6 +61,8 @@
 		3DE4BB90196F1204009140A3 /* CBDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDataController.h; sourceTree = "<group>"; };
 		3DE4BB91196F1204009140A3 /* CBDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDataController.m; sourceTree = "<group>"; };
 		3DE5DABB19745F7F0085561E /* CBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBConstants.h; sourceTree = "<group>"; };
+		3DFFAA6F19FEF60C006A970B /* CBPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPost.h; sourceTree = "<group>"; };
+		3DFFAA7019FEF60C006A970B /* CBPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPost.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 		3DE4BB93196F1217009140A3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3DFFAA6F19FEF60C006A970B /* CBPost.h */,
+				3DFFAA7019FEF60C006A970B /* CBPost.m */,
 				3DE4BB8D196F10B4009140A3 /* CBNewsSource.h */,
 				3DE4BB8E196F10B4009140A3 /* CBNewsSource.m */,
 			);
@@ -182,8 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				3DE4BB6A196F063C009140A3 /* Main.storyboard */,
-				3DE4BB6D196F063C009140A3 /* CBCollectionViewController.h */,
-				3DE4BB6E196F063C009140A3 /* CBCollectionViewController.m */,
+				3DE4BB6D196F063C009140A3 /* CBMainViewController.h */,
+				3DE4BB6E196F063C009140A3 /* CBMainViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -293,7 +298,8 @@
 				3DE4BB8F196F10B4009140A3 /* CBNewsSource.m in Sources */,
 				3DE4BB65196F063C009140A3 /* main.m in Sources */,
 				3DE4BB69196F063C009140A3 /* CBAppDelegate.m in Sources */,
-				3DE4BB6F196F063C009140A3 /* CBCollectionViewController.m in Sources */,
+				3DFFAA7119FEF60C006A970B /* CBPost.m in Sources */,
+				3DE4BB6F196F063C009140A3 /* CBMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

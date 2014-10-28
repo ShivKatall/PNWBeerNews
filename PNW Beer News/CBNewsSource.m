@@ -7,21 +7,15 @@
 //
 
 #import "CBNewsSource.h"
+#import "CBPost.h"
 
-@interface CBNewsSource () {
-    NSXMLParser *parser;
-    NSMutableDictionary *item;
-    NSMutableString *title;
-    NSMutableString *link;
-    NSMutableString *description;
-    NSMutableString *content;
-    NSString *sourceName;
-    NSString *element;
-}
+@interface CBNewsSource ()
 
-@property (nonatomic, strong) NSString *newsSourceName;
-@property (nonatomic, strong) NSURL *newsSourceURL;
-@property BOOL newsSourceActive;
+// Functional
+@property (nonatomic, strong) NSXMLParser *parser;
+@property (nonatomic, strong) NSString *element;
+@property (nonatomic, strong) NSDictionary *item;
+@property (nonatomic, strong) CBPost *post;
 
 @end
 
@@ -30,67 +24,44 @@
 - (id)initWithName:(NSString *)name URL:(NSURL *)url active:(BOOL)active {
     self = [super init];
     
+    _posts = [NSMutableArray new];
+    
     if (self) {
         _newsSourceName = name;
         _newsSourceURL = url;
-        _newsSourceActive = active;
+        _newsSourceActive = YES;
     }
     return self;
 }
 
 - (void)parse {
-    _feeds = [NSMutableArray new];
+    _parser = [[NSXMLParser alloc] initWithContentsOfURL:_newsSourceURL];
     
-    parser = [[NSXMLParser alloc] initWithContentsOfURL:_newsSourceURL];
-    
-    [parser setDelegate:self];
-    [parser setShouldResolveExternalEntities:NO];
-    [parser parse];
+    [_parser setDelegate:self];
+    [_parser setShouldResolveExternalEntities:NO];
+    [_parser parse];
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     
-    element = elementName;
+    _element = elementName;
     
-    if ([element isEqualToString:@"item"]) {
-        
-        
-        item        = [NSMutableDictionary new];
-        title       = [NSMutableString new];
-        link        = [NSMutableString new];
-        description = [NSMutableString new];
-        content     = [NSMutableString new];
-        
-        //        sourceName  = _newsSourceName;
-        
+    if ([_element isEqualToString:@"item"]) {
+        _item = [NSDictionary new];
+        _post = [CBPost new];
     }
-    
 }
 
-- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
-    
-    if ([elementName isEqualToString:@"item"]) {
-        
-        [item setObject:title forKey:@"title"];
-        [item setObject:link forKey:@"link"];
-        [item setObject:description forKey:@"description"];
-        [item setObject:content forKey:@"content:encoded"];
-        
-        [_feeds addObject:[item copy]];
-        
-    }
-    
-}
+
+// Note, may need to make separate, expendable properties for these next two methods.
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     
-    if ([element isEqualToString:@"title"]) {
-        [title appendString:string];
-        NSLog(@"%@ title: %@ \n" , _newsSourceName, title);
+    if ([_element isEqualToString:@"title"]) {
+        _post.postTitle = string;
         
-    } else if ([element isEqualToString:@"link"]) {
-        [link appendString:string];
-        NSLog(@"%@ link: %@ \n", _newsSourceName, link);
+    } else if ([_element isEqualToString:@"link"]) {
+        _post.postLink = string;
         
     }
     
@@ -100,19 +71,32 @@
     
     NSString *contentFromCData = [[NSString alloc] initWithData:CDATABlock encoding:NSUTF8StringEncoding];
     
-    if ([element isEqualToString:@"description"]) {
-        [description appendString:contentFromCData];
-        NSLog(@"%@ description: %@ \n", _newsSourceName, description);
-        
-    } else if ([element isEqualToString:@"content:encoded"]) {
-        [content appendString:contentFromCData];
-        NSLog(@"%@ content: %@ \n", _newsSourceName, content);
-        
+    if ([_element isEqualToString:@"description"]) {
+        _post.postDescription = contentFromCData;
+    } else if ([_element isEqualToString:@"content:encoded"]) {
+        _post.postContent = contentFromCData;
+    }
+}
+
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
+    
+    if ([elementName isEqualToString:@"item"]) {
+        [_posts addObject:_post];
+//        _post = nil;
     }
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
     
+}
+
+#pragma mark - Extra Parser Methods
+
+- (void)parseWithCompletion:(void(^)())completion {
+    [self parse];
+    
+    completion();
 }
 
 @end

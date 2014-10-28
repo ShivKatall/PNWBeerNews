@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>44140471-D199-4F9C-ACC5-306A3DF3768C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PNW Beer News</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>436BC67DDB8F9D149054C291246279B09694F46A</key>
+		<string>github.com:ShivKatall/PNWBeerNews.git</string>
+		<key>7C567E7E-F7D0-4F32-90B8-91A82F41E91E</key>
+		<string>ssh://github.com/ShivKatall/PNWBeerNews.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PNW Beer News.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>436BC67DDB8F9D149054C291246279B09694F46A</key>
+		<string>../..</string>
+		<key>7C567E7E-F7D0-4F32-90B8-91A82F41E91E</key>
+		<string>../../../PNW Beer News</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:ShivKatall/PNWBeerNews.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>436BC67DDB8F9D149054C291246279B09694F46A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7C567E7E-F7D0-4F32-90B8-91A82F41E91E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PNW Beer News</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>436BC67DDB8F9D149054C291246279B09694F46A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PNW%20Beer%20News</string>
+		</dict>
+	</array>
+</dict>
+</plist>

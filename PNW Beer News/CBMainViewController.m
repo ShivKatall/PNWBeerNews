@@ -6,15 +6,17 @@
 //  Copyright (c) 2014 Cole Bratcher. All rights reserved.
 //
 
-#import "CBCollectionViewController.h"
+#import "CBMainViewController.h"
 #import "CBDataController.h"
 #import "CBNewsSource.h"
 
-@interface CBCollectionViewController ()
+@interface CBMainViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation CBCollectionViewController
+@implementation CBMainViewController
 
 - (void)viewDidLoad
 {
@@ -23,18 +25,12 @@
     [DATA_CONTROLLER createNewsSources];
     
     for (CBNewsSource *newsSource in DATA_CONTROLLER.newsSources) {
-        [newsSource parse];
+        [newsSource parseWithCompletion:^(){
+            [DATA_CONTROLLER.allPosts addObjectsFromArray:newsSource.posts];
+        }];
     }
-}
-
-#pragma mark - Parser Delegate Methods
-
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    NSLog(@"%@" ,DATA_CONTROLLER.allPosts);
 }
 
 @end

@@ -10,9 +10,14 @@
 
 @interface CBNewsSource : NSObject <NSXMLParserDelegate>
 
-@property (nonatomic, strong) NSMutableArray *feeds;
+// Data
+@property (nonatomic, strong) NSString *newsSourceName;
+@property (nonatomic, strong) NSURL *newsSourceURL;
+@property BOOL newsSourceActive;
+@property (nonatomic, strong) NSMutableArray *posts;
 
 - (id)initWithName:(NSString *)name URL:(NSURL *)url active:(BOOL)active;
 - (void)parse;
+- (void)parseWithCompletion:(void(^)())completion;
 
 @end
