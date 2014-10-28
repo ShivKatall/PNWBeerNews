@@ -10,6 +10,7 @@
 
 @interface CBPost : NSObject
 
+@property (nonatomic, strong) NSString *postSource;
 @property (nonatomic, strong) NSString *postTitle;
 @property (nonatomic, strong) NSString *postLink;
 @property (nonatomic, strong) NSString *postDescription;

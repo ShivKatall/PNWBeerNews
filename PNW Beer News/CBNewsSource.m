@@ -25,6 +25,7 @@
     self = [super init];
     
     _posts = [NSMutableArray new];
+    _post = [CBPost new];
     
     if (self) {
         _newsSourceName = name;
@@ -49,6 +50,7 @@
     if ([_element isEqualToString:@"item"]) {
         _item = [NSDictionary new];
         _post = [CBPost new];
+        _post.postSource = _newsSourceName;
     }
 }
 

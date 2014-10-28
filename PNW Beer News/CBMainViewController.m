@@ -9,6 +9,8 @@
 #import "CBMainViewController.h"
 #import "CBDataController.h"
 #import "CBNewsSource.h"
+#import "CBPost.h"
+#import "CBPostCell.h"
 
 @interface CBMainViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -38,14 +40,20 @@
 
 #pragma mark - UITableView Delegate Methods
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [DATA_CONTROLLER.allPosts count];
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+-(CBPostCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
+    CBPostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
+    
+    CBPost *post = [DATA_CONTROLLER.allPosts objectAtIndex:indexPath.row];
+    
+    cell.titleLabel.text = post.postTitle;
+    // cell.sourceLabel = post.postSource;
+    cell.descriptionLabel.text = post.postDescription;
     
     return cell;
 }
