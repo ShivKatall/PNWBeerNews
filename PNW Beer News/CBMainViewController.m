@@ -10,7 +10,7 @@
 #import "CBDataController.h"
 #import "CBNewsSource.h"
 
-@interface CBMainViewController ()
+@interface CBMainViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -22,6 +22,9 @@
 {
     [super viewDidLoad];
     
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    
     [DATA_CONTROLLER createNewsSources];
     
     for (CBNewsSource *newsSource in DATA_CONTROLLER.newsSources) {
@@ -31,6 +34,20 @@
     }
     
     NSLog(@"%@" ,DATA_CONTROLLER.allPosts);
+}
+
+#pragma mark - UITableView Delegate Methods
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [DATA_CONTROLLER.allPosts count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
+    
+    return cell;
 }
 
 @end

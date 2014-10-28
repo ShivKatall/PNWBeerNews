@@ -24,6 +24,7 @@
 		3DE4BB8F196F10B4009140A3 /* CBNewsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB8E196F10B4009140A3 /* CBNewsSource.m */; };
 		3DE4BB92196F1204009140A3 /* CBDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE4BB91196F1204009140A3 /* CBDataController.m */; };
 		3DFFAA7119FEF60C006A970B /* CBPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFAA7019FEF60C006A970B /* CBPost.m */; };
+		3DFFAA7419FF1A10006A970B /* CBPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFFAA7319FF1A10006A970B /* CBPostCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		3DE5DABB19745F7F0085561E /* CBConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBConstants.h; sourceTree = "<group>"; };
 		3DFFAA6F19FEF60C006A970B /* CBPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPost.h; sourceTree = "<group>"; };
 		3DFFAA7019FEF60C006A970B /* CBPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPost.m; sourceTree = "<group>"; };
+		3DFFAA7219FF1A10006A970B /* CBPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPostCell.h; sourceTree = "<group>"; };
+		3DFFAA7319FF1A10006A970B /* CBPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPostCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +192,8 @@
 				3DE4BB6A196F063C009140A3 /* Main.storyboard */,
 				3DE4BB6D196F063C009140A3 /* CBMainViewController.h */,
 				3DE4BB6E196F063C009140A3 /* CBMainViewController.m */,
+				3DFFAA7219FF1A10006A970B /* CBPostCell.h */,
+				3DFFAA7319FF1A10006A970B /* CBPostCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE4BB92196F1204009140A3 /* CBDataController.m in Sources */,
+				3DFFAA7419FF1A10006A970B /* CBPostCell.m in Sources */,
 				3DE4BB8F196F10B4009140A3 /* CBNewsSource.m in Sources */,
 				3DE4BB65196F063C009140A3 /* main.m in Sources */,
 				3DE4BB69196F063C009140A3 /* CBAppDelegate.m in Sources */,
