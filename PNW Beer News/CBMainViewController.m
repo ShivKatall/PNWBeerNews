@@ -56,10 +56,8 @@
     cell.sourceLabel.text = post.postSource;
     
     // Convert Date into String
-    NSDateFormatter *outputFormatter = [NSDateFormatter new];
-    [outputFormatter setDateFormat:@"MMM dd"];
-    NSString *outputDate = [outputFormatter stringFromDate:post.postDate];
-    cell.dateLabel.text = outputDate;
+    
+    cell.dateLabel.text = [post createOutputDate];
     
     
     return cell;

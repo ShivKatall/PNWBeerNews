@@ -17,4 +17,6 @@
 @property (nonatomic, strong) NSString *postContent;
 @property (nonatomic, strong) NSDate *postDate;
 
+-(NSString *)createOutputDate;
+
 @end

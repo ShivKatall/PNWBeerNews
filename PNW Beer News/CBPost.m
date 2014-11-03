@@ -10,4 +10,12 @@
 
 @implementation CBPost
 
+-(NSString *)createOutputDate {
+    NSDateFormatter *outputFormatter = [NSDateFormatter new];
+    [outputFormatter setDateFormat:@"MMM dd"];
+    NSString *outputDate = [outputFormatter stringFromDate:_postDate];
+    
+    return outputDate;
+}
+
 @end
