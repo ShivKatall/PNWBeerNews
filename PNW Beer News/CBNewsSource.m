@@ -33,7 +33,7 @@
         _newsSourceActive = YES;
     }
     return self;
-}
+}   
 
 - (void)parse {
     _parser = [[NSXMLParser alloc] initWithContentsOfURL:_newsSourceURL];
@@ -59,24 +59,33 @@
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     
-    if ([_element isEqualToString:@"title"]) {
-        _post.postTitle = string;
-        
-    } else if ([_element isEqualToString:@"link"]) {
-        _post.postLink = string;
-        
+    if (_item) {
+        if ([_element isEqualToString:@"title"]) {
+            if (!_post.postTitle) {
+                _post.postTitle = string;
+            }
+        } else if ([_element isEqualToString:@"link"]) {
+            _post.postLink = string;
+        } else if ([_element isEqualToString:@"pubDate"] && !_post.postDate) {
+            NSString *feedDate = string;
+            NSDateFormatter *inputFormatter = [NSDateFormatter new];
+            [inputFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss '+0000'"];
+            NSDate *date = [inputFormatter dateFromString:feedDate];
+            _post.postDate = date;
+        }
     }
-    
 }
 
 - (void)parser:(NSXMLParser *)parser foundCDATA:(NSData *)CDATABlock {
     
     NSString *contentFromCData = [[NSString alloc] initWithData:CDATABlock encoding:NSUTF8StringEncoding];
     
-    if ([_element isEqualToString:@"description"]) {
-        _post.postDescription = contentFromCData;
-    } else if ([_element isEqualToString:@"content:encoded"]) {
-        _post.postContent = contentFromCData;
+    if (_item) {
+        if ([_element isEqualToString:@"description"]) {
+            _post.postDescription = contentFromCData;
+        } else if ([_element isEqualToString:@"content:encoded"]) {
+            _post.postContent = contentFromCData;
+        }
     }
 }
 

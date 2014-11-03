@@ -12,8 +12,10 @@
 
 @property (nonatomic, strong) NSArray *newsSources;
 @property (nonatomic, strong) NSMutableArray *allPosts;
+@property (nonatomic, strong) NSArray *sortedPosts;
 
 + (CBDataController *)dataController;
 - (void)createNewsSources;
+- (void)sortAllPosts;
 
 @end

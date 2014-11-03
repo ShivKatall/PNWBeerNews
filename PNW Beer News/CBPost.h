@@ -15,5 +15,6 @@
 @property (nonatomic, strong) NSString *postLink;
 @property (nonatomic, strong) NSString *postDescription;
 @property (nonatomic, strong) NSString *postContent;
+@property (nonatomic, strong) NSDate *postDate;
 
 @end

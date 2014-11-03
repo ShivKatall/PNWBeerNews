@@ -32,6 +32,7 @@
     for (CBNewsSource *newsSource in DATA_CONTROLLER.newsSources) {
         [newsSource parseWithCompletion:^(){
             [DATA_CONTROLLER.allPosts addObjectsFromArray:newsSource.posts];
+            [DATA_CONTROLLER sortAllPosts];
         }];
     }
     
@@ -42,18 +43,24 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [DATA_CONTROLLER.allPosts count];
+    return [DATA_CONTROLLER.sortedPosts count];
 }
 
 -(CBPostCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CBPostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
     
-    CBPost *post = [DATA_CONTROLLER.allPosts objectAtIndex:indexPath.row];
+    CBPost *post = [DATA_CONTROLLER.sortedPosts objectAtIndex:indexPath.row];
     
     cell.titleLabel.text = post.postTitle;
-    // cell.sourceLabel = post.postSource;
-    cell.descriptionLabel.text = post.postDescription;
+    cell.sourceLabel.text = post.postSource;
+    
+    // Convert Date into String
+    NSDateFormatter *outputFormatter = [NSDateFormatter new];
+    [outputFormatter setDateFormat:@"MMM dd"];
+    NSString *outputDate = [outputFormatter stringFromDate:post.postDate];
+    cell.dateLabel.text = outputDate;
+    
     
     return cell;
 }

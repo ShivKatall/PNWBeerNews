@@ -52,5 +52,10 @@
     _newsSources = [[NSArray alloc] initWithObjects:seattleBeerNews, washingtonBeerBlog, oregonCraftBeer, nil];
 }
 
+- (void)sortAllPosts
+{
+    NSSortDescriptor *sortByDate = [NSSortDescriptor sortDescriptorWithKey:@"postDate" ascending:NO];
+    _sortedPosts = [_allPosts sortedArrayUsingDescriptors:@[sortByDate]];
+}
 
 @end  
