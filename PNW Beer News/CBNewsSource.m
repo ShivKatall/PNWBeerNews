@@ -78,13 +78,13 @@
 
 - (void)parser:(NSXMLParser *)parser foundCDATA:(NSData *)CDATABlock {
     
-    NSString *contentFromCData = [[NSString alloc] initWithData:CDATABlock encoding:NSUTF8StringEncoding];
+    // [[NSString alloc] initWithData:CDATABlock encoding:NSUTF8StringEncoding];
     
     if (_item) {
         if ([_element isEqualToString:@"description"]) {
-            _post.postDescription = contentFromCData;
+            _post.postDescriptionData = CDATABlock;
         } else if ([_element isEqualToString:@"content:encoded"]) {
-            _post.postContent = contentFromCData;
+            _post.postContentData = CDATABlock;
         }
     }
 }

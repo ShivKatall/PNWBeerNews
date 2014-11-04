@@ -23,11 +23,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _sourceLabel.text       = _selectedPost.postSource;
-    _titleLabel.text        = _selectedPost.postTitle;
-    _descriptionLabel.text  = _selectedPost.postDescription;
-    _contentTextView.text   = _selectedPost.postContent;
-    _dateLabel.text         = [_selectedPost createOutputDate];
+    _sourceLabel.text                   = _selectedPost.postSource;
+    _titleLabel.text                    = _selectedPost.postTitle;
+    _dateLabel.text                     = [_selectedPost createOutputDate];
+    
+    [_selectedPost createAttributedTextForDescriptionWithCompletionBlock:^{
+        _descriptionLabel.attributedText = _selectedPost.postDescriptionText;
+    }];
+    
+    [_selectedPost createAttributedTextForContentWithCompletionBlock:^{
+        _contentTextView.attributedText = _selectedPost.postContentText;
+    }];
     
 }
 

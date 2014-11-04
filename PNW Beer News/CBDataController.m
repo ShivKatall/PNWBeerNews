@@ -58,4 +58,4 @@
     _sortedPosts = [_allPosts sortedArrayUsingDescriptors:@[sortByDate]];
 }
 
-@end  
+@end

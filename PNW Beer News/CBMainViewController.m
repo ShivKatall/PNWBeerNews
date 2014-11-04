@@ -11,6 +11,7 @@
 #import "CBNewsSource.h"
 #import "CBPost.h"
 #import "CBPostCell.h"
+#import "CBPostViewController.h"
 
 @interface CBMainViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -39,6 +40,18 @@
     NSLog(@"%@" ,DATA_CONTROLLER.allPosts);
 }
 
+#pragma mark - Segues
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"PostDetailSegue"]) {
+        CBPostViewController *destination = segue.destinationViewController;
+        NSIndexPath *indexPath      = [_tableView indexPathForSelectedRow];
+        destination.selectedPost  = [DATA_CONTROLLER sortedPosts][indexPath.row];
+    }
+}
+
 #pragma mark - UITableView Delegate Methods
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -59,8 +72,12 @@
     
     cell.dateLabel.text = [post createOutputDate];
     
-    
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
