@@ -10,4 +10,10 @@
 
 @interface UIColor (CBColorScheme)
 
++ (UIColor *)CBBrownColor;
++ (UIColor *)CBDarkGreenColor;
++ (UIColor *)CBLightGreenColor;
++ (UIColor *)CBLimeGreenColor;
++ (UIColor *)CBGoldenColor;
+
 @end
