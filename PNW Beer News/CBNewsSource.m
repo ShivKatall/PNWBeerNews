@@ -81,9 +81,10 @@
     // [[NSString alloc] initWithData:CDATABlock encoding:NSUTF8StringEncoding];
     
     if (_item) {
-        if ([_element isEqualToString:@"description"]) {
-            _post.postDescriptionData = CDATABlock;
-        } else if ([_element isEqualToString:@"content:encoded"]) {
+        //        if ([_element isEqualToString:@"description"]) {
+        //            _post.postDescriptionData = CDATABlock;
+        //        }
+        if ([_element isEqualToString:@"content:encoded"]) {
             _post.postContentData = CDATABlock;
         }
     }

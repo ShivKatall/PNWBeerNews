@@ -13,8 +13,8 @@
 @property (nonatomic, strong) NSString *postSource;
 @property (nonatomic, strong) NSString *postTitle;
 @property (nonatomic, strong) NSString *postLink;
-@property (nonatomic, strong) NSData *postDescriptionData;
-@property (nonatomic, strong) NSAttributedString *postDescriptionText;
+//@property (nonatomic, strong) NSData *postDescriptionData;
+//@property (nonatomic, strong) NSAttributedString *postDescriptionText;
 @property (nonatomic, strong) NSData *postContentData;
 @property (nonatomic, strong) NSAttributedString *postContentText;
 @property (nonatomic, strong) NSDate *postDate;

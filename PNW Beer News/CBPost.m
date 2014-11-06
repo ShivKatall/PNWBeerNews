@@ -18,16 +18,16 @@
     return outputDate;
 }
 
--(void)createAttributedTextForDescriptionWithCompletionBlock:(void (^)())completion
-{
-        NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithData:_postDescriptionData
-                                                                              options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]}
-                                                                   documentAttributes:nil
-                                                                                error:nil];
-        _postDescriptionText = attributedText;
-    
-    completion();
-}
+//-(void)createAttributedTextForDescriptionWithCompletionBlock:(void (^)())completion
+//{
+//        NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithData:_postDescriptionData
+//                                                                              options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]}
+//                                                                   documentAttributes:nil
+//                                                                                error:nil];
+//        _postDescriptionText = attributedText;
+//    
+//    completion();
+//}
 
 -(void)createAttributedTextForContentWithCompletionBlock:(void (^)())completion
 {
@@ -35,16 +35,20 @@
                                                                               options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]}
                                                                    documentAttributes:nil
                                                                                 error:nil];
-   
-    _postContentText = attributedText;
+    
+    NSAttributedString *formattedText = [self formatAttributedText:attributedText];
+    _postContentText = formattedText;
     
     completion();
 }
 
 -(NSAttributedString *)formatAttributedText:(NSMutableAttributedString *)attributedText
 {
-    [attributedText beginEditing];
-    attributedText addAttribute:NSFontAttributeName value: range:<#(NSRange)#>
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:14.0f];
+    
+    [attributedText addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, [attributedText length])];
+    
+    return attributedText;
 }
                    
 @end

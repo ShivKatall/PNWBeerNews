@@ -27,9 +27,9 @@
     _titleLabel.text                    = _selectedPost.postTitle;
     _dateLabel.text                     = [_selectedPost createOutputDate];
     
-    [_selectedPost createAttributedTextForDescriptionWithCompletionBlock:^{
-        _descriptionLabel.attributedText = _selectedPost.postDescriptionText;
-    }];
+//    [_selectedPost createAttributedTextForDescriptionWithCompletionBlock:^{
+//        _descriptionLabel.attributedText = _selectedPost.postDescriptionText;
+//    }];
     
     [_selectedPost createAttributedTextForContentWithCompletionBlock:^{
         _contentTextView.attributedText = _selectedPost.postContentText;

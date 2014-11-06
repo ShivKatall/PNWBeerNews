@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D09AB291A0B051700945215 /* UIColor+CBColorScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09AB281A0B051700945215 /* UIColor+CBColorScheme.m */; };
 		3D8B009C1A081067009839D3 /* CBPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D8B009B1A081067009839D3 /* CBPostViewController.m */; };
 		3DE4BB59196F063C009140A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB58196F063C009140A3 /* Foundation.framework */; };
 		3DE4BB5B196F063C009140A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE4BB5A196F063C009140A3 /* CoreGraphics.framework */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D09AB271A0B051700945215 /* UIColor+CBColorScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CBColorScheme.h"; sourceTree = "<group>"; };
+		3D09AB281A0B051700945215 /* UIColor+CBColorScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CBColorScheme.m"; sourceTree = "<group>"; };
 		3D8B009A1A081066009839D3 /* CBPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPostViewController.h; sourceTree = "<group>"; };
 		3D8B009B1A081067009839D3 /* CBPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPostViewController.m; sourceTree = "<group>"; };
 		3DE4BB55196F063C009140A3 /* PNW Beer News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PNW Beer News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +202,8 @@
 				3D8B009B1A081067009839D3 /* CBPostViewController.m */,
 				3DFFAA7219FF1A10006A970B /* CBPostCell.h */,
 				3DFFAA7319FF1A10006A970B /* CBPostCell.m */,
+				3D09AB271A0B051700945215 /* UIColor+CBColorScheme.h */,
+				3D09AB281A0B051700945215 /* UIColor+CBColorScheme.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				3DE4BB92196F1204009140A3 /* CBDataController.m in Sources */,
 				3DFFAA7419FF1A10006A970B /* CBPostCell.m in Sources */,
 				3DE4BB8F196F10B4009140A3 /* CBNewsSource.m in Sources */,
+				3D09AB291A0B051700945215 /* UIColor+CBColorScheme.m in Sources */,
 				3D8B009C1A081067009839D3 /* CBPostViewController.m in Sources */,
 				3DE4BB65196F063C009140A3 /* main.m in Sources */,
 				3DE4BB69196F063C009140A3 /* CBAppDelegate.m in Sources */,
