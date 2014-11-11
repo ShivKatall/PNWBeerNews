@@ -17,5 +17,6 @@
 + (CBDataController *)dataController;
 - (void)createNewsSources;
 - (void)sortAllPosts;
+- (BOOL)foundAnyData;
 
 @end

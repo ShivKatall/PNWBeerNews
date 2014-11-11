@@ -8,6 +8,7 @@
 
 #import "CBDataController.h"
 #import "CBNewsSource.h"
+#import "CBPost.h"
 
 @implementation CBDataController
 
@@ -56,6 +57,20 @@
 {
     NSSortDescriptor *sortByDate = [NSSortDescriptor sortDescriptorWithKey:@"postDate" ascending:NO];
     _sortedPosts = [_allPosts sortedArrayUsingDescriptors:@[sortByDate]];
+}
+
+- (BOOL)foundAnyData
+{
+    BOOL dataFound = NO;
+    
+    for (CBNewsSource *newsSource in _newsSources) {
+        if (newsSource.foundData == YES) {
+            dataFound = YES;
+            break;
+        }
+    }
+    
+    return dataFound;
 }
 
 @end

@@ -13,8 +13,9 @@
 // Data
 @property (nonatomic, strong) NSString *newsSourceName;
 @property (nonatomic, strong) NSURL *newsSourceURL;
-@property BOOL newsSourceActive;
 @property (nonatomic, strong) NSMutableArray *posts;
+@property (nonatomic) BOOL newsSourceActive;
+@property (nonatomic) BOOL foundData;
 
 - (id)initWithName:(NSString *)name URL:(NSURL *)url active:(BOOL)active;
 - (void)parse;

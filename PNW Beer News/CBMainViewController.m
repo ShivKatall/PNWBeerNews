@@ -37,6 +37,16 @@
         }];
     }
     
+    if ([DATA_CONTROLLER foundAnyData] == NO) {
+        
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error Loading Content"
+                                                             message:@"Please make sure your device is connected to the internet."
+                                                            delegate:self
+                                                   cancelButtonTitle:@"OK"
+                                                   otherButtonTitles:nil];
+        [errorAlert show];
+    }
+    
     NSLog(@"%@" ,DATA_CONTROLLER.allPosts);
 }
 

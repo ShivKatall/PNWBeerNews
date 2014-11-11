@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSDictionary *item;
 @property (nonatomic, strong) CBPost *post;
 
+
 @end
 
 @implementation CBNewsSource
@@ -40,7 +41,12 @@
     
     [_parser setDelegate:self];
     [_parser setShouldResolveExternalEntities:NO];
-    [_parser parse];
+    if ([_parser parse] == NO) {
+        NSLog(@"Cannot retrieve data from %@", _newsSourceURL);
+        _foundData = NO;
+    } else {
+        _foundData = YES;
+    }
 }
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
@@ -54,6 +60,17 @@
     }
 }
 
+- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
+    
+    NSString *errorString = [NSString stringWithFormat:@"Unable to download data (Error code %li )",(long)[parseError code]];
+    
+    UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error loading content."
+                                                         message:errorString
+                                                        delegate:self
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
+    [errorAlert show];
+}
 
 // Note, may need to make separate, expendable properties for these next two methods.
 
