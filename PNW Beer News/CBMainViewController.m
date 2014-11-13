@@ -62,6 +62,14 @@
     }
 }
 
+#pragma mark - IBActions
+
+- (IBAction)refreshButtonPressed:(id)sender
+{
+    [_tableView reloadData];
+}
+
+
 #pragma mark - UITableView Delegate Methods
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

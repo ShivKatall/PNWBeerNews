@@ -8,7 +8,7 @@
 
 #import "CBPostViewController.h"
 
-@interface CBPostViewController ()
+@interface CBPostViewController () <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *sourceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
