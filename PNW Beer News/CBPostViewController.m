@@ -31,10 +31,13 @@
 //        _descriptionLabel.attributedText = _selectedPost.postDescriptionText;
 //    }];
     
-    [_selectedPost createAttributedTextForContentWithCompletionBlock:^{
-        _contentTextView.attributedText = _selectedPost.postContentText;
-    }];
-    
+    if (_selectedPost.postContentData) {
+        [_selectedPost createAttributedTextForContentWithCompletionBlock:^{
+            _contentTextView.attributedText = _selectedPost.postContentText;
+        }];
+    } else {
+        _contentTextView.text = _selectedPost.postDescription;
+    }
 }
 
 @end

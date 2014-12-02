@@ -89,6 +89,10 @@
             [inputFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss '+0000'"];
             NSDate *date = [inputFormatter dateFromString:feedDate];
             _post.postDate = date;
+        } else if ([_element isEqualToString:@"description"]) {
+            _post.postDescription = string;
+            
+            // See this Post for help: http://stackoverflow.com/questions/26545634/nsxmlparser-n-and-t-inside-of-text
         }
     }
 }
@@ -101,6 +105,7 @@
         //        if ([_element isEqualToString:@"description"]) {
         //            _post.postDescriptionData = CDATABlock;
         //        }
+
         if ([_element isEqualToString:@"content:encoded"]) {
             _post.postContentData = CDATABlock;
         }
