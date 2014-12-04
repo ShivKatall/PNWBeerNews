@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *element;
 @property (nonatomic, strong) NSDictionary *item;
 @property (nonatomic, strong) CBPost *post;
+@property (nonatomic, strong) NSMutableString *descriptionString;
 
 
 @end
@@ -77,6 +78,9 @@
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     
     if (_item) {
+        
+        _descriptionString = [NSMutableString new];
+        
         if ([_element isEqualToString:@"title"]) {
             if (!_post.postTitle) {
                 _post.postTitle = string;
@@ -90,7 +94,7 @@
             NSDate *date = [inputFormatter dateFromString:feedDate];
             _post.postDate = date;
         } else if ([_element isEqualToString:@"description"]) {
-            _post.postDescription = string;
+            [_descriptionString appendString:string];
             
             // See this Post for help: http://stackoverflow.com/questions/26545634/nsxmlparser-n-and-t-inside-of-text
         }
@@ -116,6 +120,7 @@
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     
     if ([elementName isEqualToString:@"item"]) {
+        _post.postDescription = _descriptionString;
         [_posts addObject:_post];
 //        _post = nil;
     }

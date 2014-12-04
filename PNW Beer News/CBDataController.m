@@ -36,7 +36,7 @@
     NSURL *seattleBeerNewsURL       = [NSURL URLWithString:@"http://seattlebeernews.com/feed/"];
     NSURL *washingtonBeerBlogURL    = [NSURL URLWithString:@"http://www.washingtonbeerblog.com/feed/"];
     NSURL *oregonCraftBeerURL       = [NSURL URLWithString:@"http://oregoncraftbeer.org/news/feed/"];
-    NSURL *brewpublicURL            = [NSURL URLWithString:@"http://fulltextrssfeed.com/brewpublic.com/feed"];
+//    NSURL *brewpublicURL            = [NSURL URLWithString:@"http://fulltextrssfeed.com/brewpublic.com/feed"];
     NSURL *boiseBeerCultureURL      = [NSURL URLWithString:@"http://boisebeerculture.blogspot.com/feeds/posts/default"];
     NSURL *alaskanBeerURL           = [NSURL URLWithString:@"http://alaskanbeer.blogspot.com/feeds/posts/default"];
 
@@ -52,9 +52,9 @@
                                                                          URL:oregonCraftBeerURL
                                                                       active:YES];
     
-    CBNewsSource *brewpublic            = [[CBNewsSource alloc] initWithName:@"Brewpublic"
-                                                                         URL:brewpublicURL
-                                                                      active:YES];
+//    CBNewsSource *brewpublic            = [[CBNewsSource alloc] initWithName:@"Brewpublic"
+//                                                                         URL:brewpublicURL
+//                                                                      active:YES];
     
     CBNewsSource *boiseBeerCulture      = [[CBNewsSource alloc] initWithName:@"Boise Beer Culture"
                                                                          URL:boiseBeerCultureURL
@@ -64,7 +64,7 @@
                                                                          URL:alaskanBeerURL
                                                                       active:YES];
     
-    _newsSources = [[NSArray alloc] initWithObjects:seattleBeerNews, washingtonBeerBlog, oregonCraftBeer, brewpublic, boiseBeerCulture, alaskanBeer, nil];
+    _newsSources = [[NSArray alloc] initWithObjects:seattleBeerNews, washingtonBeerBlog, oregonCraftBeer, boiseBeerCulture, alaskanBeer, nil];
 }
 
 - (void)sortAllPosts
