@@ -37,8 +37,8 @@
     NSURL *washingtonBeerBlogURL    = [NSURL URLWithString:@"http://www.washingtonbeerblog.com/feed/"];
     NSURL *oregonCraftBeerURL       = [NSURL URLWithString:@"http://oregoncraftbeer.org/news/feed/"];
 //    NSURL *brewpublicURL            = [NSURL URLWithString:@"http://fulltextrssfeed.com/brewpublic.com/feed"];
-    NSURL *boiseBeerCultureURL      = [NSURL URLWithString:@"http://boisebeerculture.blogspot.com/feeds/posts/default"];
-    NSURL *alaskanBeerURL           = [NSURL URLWithString:@"http://alaskanbeer.blogspot.com/feeds/posts/default"];
+    NSURL *boiseBeerCultureURL      = [NSURL URLWithString:@"http://boisebeerculture.blogspot.com/feeds/posts/default?alt=rss"];
+    NSURL *alaskanBeerURL           = [NSURL URLWithString:@"http://alaskanbeer.blogspot.com/feeds/posts/default?alt=rss"];
 
     CBNewsSource *seattleBeerNews       = [[CBNewsSource alloc] initWithName:@"Seattle Beer News"
                                                                          URL:seattleBeerNewsURL

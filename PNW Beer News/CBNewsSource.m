@@ -1,4 +1,3 @@
-//
 //  CBNewsSource.m
 //  PNW Beer News
 //
@@ -17,13 +16,14 @@
 @property (nonatomic, strong) NSDictionary *item;
 @property (nonatomic, strong) CBPost *post;
 @property (nonatomic, strong) NSMutableString *descriptionString;
-
+@property (nonatomic, strong) NSData *xmlData;
 
 @end
 
 @implementation CBNewsSource
 
-- (id)initWithName:(NSString *)name URL:(NSURL *)url active:(BOOL)active {
+- (id)initWithName:(NSString *)name URL:(NSURL *)url active:(BOOL)active
+{
     self = [super init];
     
     _posts = [NSMutableArray new];
@@ -35,10 +35,15 @@
         _newsSourceActive = YES;
     }
     return self;
-}   
+}
 
-- (void)parse {
-    _parser = [[NSXMLParser alloc] initWithContentsOfURL:_newsSourceURL];
+- (void)parse
+{
+    _xmlData = [[NSData alloc] initWithContentsOfURL:_newsSourceURL];
+    
+// Look into this, especially GDataXML for better parsing methods. http://www.raywenderlich.com/2636/rss-reader-tutorial-for-ios-how-to-make-a-simple-rss-reader-iphone-app
+    
+    _parser = [[NSXMLParser alloc] initWithData:_xmlData];
     
     [_parser setDelegate:self];
     [_parser setShouldResolveExternalEntities:NO];
@@ -50,7 +55,8 @@
     }
 }
 
-- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+{
     
     _element = elementName;
     
@@ -61,7 +67,8 @@
     }
 }
 
-- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
+- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
+{
     
     NSString *errorString = [NSString stringWithFormat:@"Unable to download data (Error code %li )",(long)[parseError code]];
     
